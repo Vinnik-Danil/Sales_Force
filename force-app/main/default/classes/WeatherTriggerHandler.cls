@@ -8,6 +8,27 @@ public with sharing class WeatherTriggerHandler {
         //Use SOQL to get City record information
         //insert Anomalies
         //update City
+        AnomalyDetector anomalyDetector = new AnomalyDetector();
+        List<Anomaly__c> anomaliesToSave = new List<Anomaly__c>();
+
+        for(Weather__c weather : newList) {
+            List<Anomaly__c> temp = new List<Anomaly__c>();
+            temp = anomalyDetector.detectAnomaly(weather);
+            for (Anomaly__c anomaly : temp) {
+                anomaliesToSave.add(anomaly);
+            }
+        }
+
+        List<City__c> cityResponsesList = [SELECT Id, Name FROM City__C];
+
+        if (!anomaliesToSave.isEmpty()) {
+            insert anomaliesToSave;
+        }
+
+        if (!cityResponsesList.isEmpty()) {
+            update cityResponsesList;
+        }
+
     }
 
     public static void handleBeforeUpdate(List<Weather__c> newList, List<Weather__c> oldList){}
