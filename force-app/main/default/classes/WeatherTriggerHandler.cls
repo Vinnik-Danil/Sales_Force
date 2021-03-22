@@ -11,16 +11,13 @@ public with sharing class WeatherTriggerHandler {
         AnomalyDetector anomalyDetector = new AnomalyDetector();
         List<Anomaly__c> anomaliesToSave = new List<Anomaly__c>();
 
-        for(Weather__c weather : newList) {
-            List<Anomaly__c> temp = new List<Anomaly__c>();
-            temp = anomalyDetector.detectAnomaly(weather);
-            for (Anomaly__c anomaly : temp) {
-                anomaliesToSave.add(anomaly);
-            }
+        if (!anomaliesToSave.isEmpty()) {
+            insert anomaliesToSave;
         }
 
         List<City__c> cityResponsesList = [SELECT Id, Name FROM City__C];
 
+        
         if (!anomaliesToSave.isEmpty()) {
             insert anomaliesToSave;
         }

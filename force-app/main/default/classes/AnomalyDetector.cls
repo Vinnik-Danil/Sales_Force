@@ -21,6 +21,15 @@ public with sharing class AnomalyDetector {
         //                     FROM weather 
         //                     WHERE Temperature > Maximum_Temperature OR Pressure>25];
         // System.debug(weath);
+        Set<Id> weatherId = new Set<Id>();
+
+        for(Weather__c weather : weatherList){
+            weatherId.add(weather.Id);
+        }
+        weatherList = [SELECT Id, City__c, City__r.Name, Minimal_Temperature__c, Maximum_Temperature__c, Pressure__c, Humidity__c 
+                       FROM Weather__c 
+                       WHERE Id IN: weatherId];
+        for(Weather__c weather : weatherList) {
         if (weather.Minimal_Temperature__c < anomalyRangeSetting.Min_Temperature__c ||
             weather.Maximum_Temperature__c > anomalyRangeSetting.Max_Temperature__c)
             {
@@ -36,7 +45,7 @@ public with sharing class AnomalyDetector {
             {
                 anomaliesToSave.add(createAnomaly(weather, 'Humidity Anomaly'));
             }
-
+        }
         return anomaliesToSave;
     }
     private Anomaly__c createAnomaly(Weather__c weather, String typeAnomaly){
