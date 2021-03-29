@@ -1,0 +1,56 @@
+<apex:page renderAs="pdf" applyHtmlTag="false" showHeader="false" controller="AnomalyReportPageController">
+    <head>
+        <style>
+            table, th, td{
+            	border: 1px solid black;
+            }
+            
+            h1 {
+            	text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Anomaly Report</h1>
+        <div style="{! 'display: ' + IF(ISNULL(resultWrapper.resultList), 'none', '')}">
+            <div>
+                <p>
+                    <span>Period:</span>
+                    <span>{!resultWrapper.startPeriod}</span> - 
+                    <span>{!resultWrapper.endPeriod}</span>
+                </p>
+            </div>
+            <div>
+                <table style="width:100%">
+                    
+                    <tr>
+                        <th width = "40%">City</th>
+                        <th>Temperature Anomalies</th>
+                        <th>Pressure Anomalies</th> 
+                        <th>Humidity Anomalies</th>
+                        
+                    </tr>
+                    
+                    <apex:repeat var="row_result" value="{!resultWrapper.resultList}">
+                        <tr>
+                            <td width = "40%">{!row_result.city}</td>
+                            <td>{!row_result.temperatureAnomalyCount}</td>
+                            <td>{!row_result.pressureAnomalyCount}</td>
+                            <td>{!row_result.humidityAnomalyCount}</td>
+                        </tr>
+                        
+                    </apex:repeat> 
+                </table>
+                <p>Total: {!resultWrapper.anomaliesTotal}</p>
+            </div>
+        </div>
+        
+        <div style="{! 'display: ' + IF(ISNULL(resultWrapper.resultList), '', 'none')}">
+            <p>No anomaly detected!</p>
+        </div>
+        <div>
+            <p>Created at: {!resultWrapper.createdAt}</p>
+            <p>Created by: {!$User.FirstName} {!$User.LastName}</p>
+        </div>
+    </body>
+</apex:page>
