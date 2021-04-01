@@ -1,7 +1,7 @@
 @IsTest
 public class TestDataFactory {
 
-    public static Weather__c createweatherWithoutAnomalies(Anomaly_Range_Configuration__c anomalyRangeConfig, List<City__c> city) {
+    public static Weather__c createWeatherWithoutAnomalies(Anomaly_Range_Configuration__c anomalyRangeConfig, List<City__c> city) {
         Weather__c weather = new Weather__c(
                 City__c = city.get(0).Id,
                 Maximum_Temperature__c = anomalyRangeConfig.Max_Temperature__c,
@@ -13,7 +13,7 @@ public class TestDataFactory {
     }
 
     public static Weather__c createWeatherWithAnomaly(String anomaly, Anomaly_Range_Configuration__c anomalyRangeConfig, List<City__c> city){
-        Weather__c weather = createweatherWithoutAnomalies(anomalyRangeConfig, city);
+        Weather__c weather = createWeatherWithoutAnomalies(anomalyRangeConfig, city);
 
         if (anomaly == 'Temperature Anomaly') {
             weather.Maximum_Temperature__c += 10;
@@ -53,6 +53,4 @@ public class TestDataFactory {
         );
         return anomalyRangeSetting;
     }
-
-
 }

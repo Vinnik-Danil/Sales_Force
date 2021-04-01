@@ -60,7 +60,7 @@ private class TestWeatherTriggerHandler {
     }
 
     @IsTest static void checkWithoutAnomalies(){
-        Weather__c weatherWithoutAnomalies = TestDataFactory.createweatherWithoutAnomalies(anomalyRangeConfig, testCity);
+        Weather__c weatherWithoutAnomalies = TestDataFactory.createWeatherWithoutAnomalies(anomalyRangeConfig, testCity);
 
         Test.startTest();
         Database.SaveResult result = Database.insert(weatherWithoutAnomalies, true);
