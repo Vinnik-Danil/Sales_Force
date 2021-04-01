@@ -2,18 +2,18 @@ public class OpenWeatherCalloutService {
 
     private static final String API_KEY = Anomaly_Range_Configuration__c.getOrgDefaults().API_Key__c;
     private static final String ENDPOINT_URL = 'https://api.openweathermap.org/data/2.5/weather';
-    private Map<String, City__c> cityCodeCity;
+    private Map<String, City__c> cityCodeToCityMap;
 
     public OpenWeatherCalloutService(){
-        this.cityCodeCity = new Map<String, City__c> ();
+        this.cityCodeToCityMap = new Map<String, City__c> ();
         for(City__c city : [SELECT Id, City_Code__c FROM City__c]){
-            cityCodeCity.put(city.City_Code__c, city);
+            cityCodeToCityMap.put(city.City_Code__c, city);
         }
     }
 
     public void getWeatherFromOpenWeather(){
         List<Weather__c> weathers = new List<Weather__c> ();
-        for(City__c city : cityCodeCity.values()){
+        for(City__c city : cityCodeToCityMap.values()){
             Weather__c weather = makeCallout(city.City_Code__c);
             if(weather != null){
                 weathers.add(weather);
@@ -45,7 +45,7 @@ public class OpenWeatherCalloutService {
     public Weather__c getWeatherFromResponse(OpenWeatherResponse response, String cityId){
 
         Weather__c weather = DataFactory.getWeather(
-                cityCodeCity.get(cityId),
+                ccityCodeToCityMap.get(cityId),
                 response.main.temp,
                 response.main.feels_like,
                 response.main.temp_min,
