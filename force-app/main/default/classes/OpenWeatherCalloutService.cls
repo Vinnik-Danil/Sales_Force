@@ -25,10 +25,10 @@ public without sharing class OpenWeatherCalloutService{
         }
     }
 
-    public Weather__c makeCallout(String cityCode){
+    public Weather__c makeCallout(String cityId){
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint(ENDPOINT_URL + '?id=' + cityCode + '&appid='+ API_KEY);
+        request.setEndpoint(ENDPOINT_URL + '?id=' + cityId + '&appid='+ API_KEY);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         if(response.getStatusCode()==200){
