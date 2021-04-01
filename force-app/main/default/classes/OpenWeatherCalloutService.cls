@@ -1,24 +1,28 @@
-public with sharing class OpenWeatherCalloutService {
-    private static final String ENDPOINT_URL = 'https://api.openweathermap.org/data/2.5/weather'; 
+public without sharing class OpenWeatherCalloutService{
+
     private static final String API_KEY = Anomaly_Range_Configuration__c.getOrgDefaults().API_Key__c;
+    private static final String ENDPOINT_URL = 'https://api.openweathermap.org/data/2.5/weather';
     private Map<String, City__c> cityCodeToCityMap;
 
     public OpenWeatherCalloutService(){
         this.cityCodeToCityMap = new Map<String, City__c>();
-        for(City__c city : [SELECT id, City_Code__c FROM City__c]){
-            cityCodeToCityMap.put(city.City_Code__c, city);
+        for (City__c city : [SELECT id, City_Code__c FROM City__c ]) {
+            this.cityCodeToCityMap.put(city.City_Code__c, city);
         }
     }
-
+    @future(callout=true)
     public void getWeatherFromOpenWeather(){
         List<Weather__c> weathersToCreate = new List<Weather__c>();
-        for(City__c city : cityCodeToCityMap.values()){
-            weather__c newWeather = makeCallout(city.City_Code__c);
-            if (newWeather!=null) {
-                weathersToCreate.add(newWeather);
-            }
+        for (City__c city : cityCodeToCityMap.values()) {
+            Weather__c currentWeather = makeCallout(city.City_Code__c);
+            if(currentWeather!=null){
+                weathersToCreate.add(currentWeather);
+            }            
         }
-        insert weathersToCreate;
+        system.debug('weathersToCreate size:' + weathersToCreate.size());
+        if(!weathersToCreate.isEmpty()){
+            insert weathersToCreate;
+        }
     }
 
     public Weather__c makeCallout(String cityCode){
@@ -28,45 +32,39 @@ public with sharing class OpenWeatherCalloutService {
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         if(response.getStatusCode()==200){
-            String responseBody = response.getBody();
-            OpenWeatherResponse responseWrap =(OpenWeatherResponse)JSON.deserialize(response.getBody(), OpenWeatherResponse.class);
-            return gerateWeather(responseWrap);
+            // String responseBody = response.getBody();
+            OpenWeatherResponse weatherResponse =(OpenWeatherResponse)JSON.deserialize(response.getBody(), OpenWeatherResponse.class);
+            return popularWeatherRecord(weatherResponse, cityId);
         }else {
+            system.debug('Status code: ' + response.getStatusCode());
+            system.debug('Status: ' + response.getStatus());
             return null;
         }
     }
-    
-    public Weather__c gerateWeather(OpenWeatherResponse response){
-       
-        Weather__c newWeather = new Weather__c(
-            Visibility__c = response.Visibility,
-            Temperature__c = response.temp,
-            Temperature_Feels_Like__c = response.feels_like,
-            Minimal_Temperature__c = response.temp_min,
-            Maximum_Temperature__c = response.temp_max,
-            Pressure__c = response.pressure,
-            Humidity__c = response.humidity
-            );
-            // if (response.clouds!=null) {
-            //     newWeather.Cloudiness__c = response.clouds;
-                
-            // }
-        
+
+    public Weather__c popularWeatherRecord(OpenWeatherResponse responseWrap, String cityId){
+        Weather__c newWeather = new Weather__c(City__c = cityCodeToCityMap.get(cityid).id
+                                                , Visibility__c = responseWrap.visibility
+                                                , Temperature__c = responseWrap.main.temp
+                                                , Temperature_Feels_Like__c = responseWrap.main.feels_like
+                                                , Minimal_Temperature__c = responseWrap.main.temp_min
+                                                , Maximum_Temperature__c = responseWrap.main.temp_max
+                                                , Pressure__c = responseWrap.main.pressure
+                                                , Humidity__c = responseWrap.main.humidity);
+        if(responseWrap.wind!=null){
+            newWeather.Wind_speed__c = responseWrap.wind.speed;
+        }
+        if(responseWrap.clouds!=null){
+            newWeather.Cloudiness__c = responseWrap.clouds.all;
+        }
         return newWeather;
     }
 
-
-    public class OpenWeatherResponse{
+        public class OpenWeatherResponse{
         public Main main;
         public Integer visibility;
         public Clouds clouds;
         public Wind wind; 
-        public Decimal temp; 
-        public Decimal feels_like;
-        public Decimal temp_min;
-        public Decimal temp_max;
-        public Integer pressure;
-        public Integer humidity;
     }
     public class Main{
         public Decimal temp; 
@@ -83,5 +81,4 @@ public with sharing class OpenWeatherCalloutService {
     public class Wind{
         public Decimal speed;
     }
-
 }
