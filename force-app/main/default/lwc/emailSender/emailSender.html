@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <h3 slot="title" class="slds-var-m-horizontal_x-small">
+            <lightning-icon icon-name="utility:email" size="small"></lightning-icon>
+            Send Report
+        </h3>
+        <div slot="footer">
+            <lightning-button variant="brand" label="Send" title="Send" onclick={handleSend} class="slds-var-m-left_x-small">
+            </lightning-button>
+        </div>
+        <div class="slds-var-m-horizontal_x-small">
+            <lightning-dual-listbox name="languages"
+                            label="Select Email Recipients"
+                            source-label="Available"
+                            selected-label="Selected"
+                            options={options}
+                            onchange={handleChange}></lightning-dual-listbox>
+        </div>
+
+    </lightning-card>
+</template>

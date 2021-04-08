@@ -1,0 +1,10 @@
+.THIS .card{
+        /* min-width:320px;
+        max-width:450px; */
+        display: flex;
+        flex-wrap: wrap;
+}
+.THIS  .incard{
+    max-width: 680px;
+    margin: 10px auto;
+}
