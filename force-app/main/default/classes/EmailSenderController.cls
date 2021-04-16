@@ -24,23 +24,24 @@ public without sharing class EmailSenderController {
             emailMessage.setTemplateId(templates[0].Id);
             emailMessage.setTargetObjectId(userId);
             emailMessage.setSaveAsActivity(false);
-            if(!documentLinks.isEmpty()){
+            // if(!documentLinks.isEmpty()){
                 emailMessage.setEntityAttachments(new List<Id> {documentLinks[0].ContentDocument.LatestPublishedVersionId});
-            }
+            // }
             messagesToSend.add(emailMessage);
         }
+        Messaging.sendEmail(messagesToSend);
         
-        List<Messaging.SendEmailResult> results = Messaging.sendEmail(messagesToSend, false);
-        for(Messaging.SendEmailResult res : results){
-            if(!res.isSuccess()){
-                List<Messaging.SendEmailError> errors = res.getErrors();
-                for(Messaging.SendEmailError err : errors){
-                    system.debug('error: ' + err.getMessage());
-                }
-            } else {
-                system.debug('OK!');
-            }
-        }
+        // List<Messaging.SendEmailResult> results = Messaging.sendEmail(messagesToSend, false);
+        // for(Messaging.SendEmailResult res : results){
+        //     if(!res.isSuccess()){
+        //         List<Messaging.SendEmailError> errors = res.getErrors();
+        //         for(Messaging.SendEmailError err : errors){
+        //             system.debug('error: ' + err.getMessage());
+        //         }
+        //     } else {
+        //         system.debug('OK!');
+        //     }
+        // }
         
     }
 }

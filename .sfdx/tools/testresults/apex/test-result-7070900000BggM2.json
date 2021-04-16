@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 1,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "100%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Wed Apr 14 2021 9:13:55 AM",
+    "testExecutionTimeInMs": 3350,
+    "testTotalTimeInMs": 3350,
+    "commandTimeInMs": 436,
+    "hostname": "https://koroka3-dev-ed.my.salesforce.com",
+    "orgId": "00D09000007InLiEAK",
+    "username": "danil@koroka.com",
+    "testRunId": "7070900000BggM2",
+    "userId": "00509000004BKFGAA4"
+  },
+  "tests": [
+    {
+      "id": "07M09000001CBK6EAO",
+      "queueItemId": "70909000000DpNbAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggM2AAJ",
+      "methodName": "testDailyLeadProcessor",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhONWAA3",
+        "name": "DailyLeadProcessorTest",
+        "namespacePrefix": null,
+        "fullName": "DailyLeadProcessorTest"
+      },
+      "runTime": 3350,
+      "testTimestamp": "2021-04-14T06:13:56.000+0000",
+      "fullName": "DailyLeadProcessorTest.testDailyLeadProcessor"
+    }
+  ]
+}

@@ -11,6 +11,7 @@ export default class EmailSender extends LightningElement {
         getEmailAddresses()
 			.then(result => {
                 this.options = [];
+                console.log('SUCCESS')
                 console.log('result' + JSON.stringify(result));
                 result.forEach(val => {
                     console.log('val: ' + JSON.stringify(val));

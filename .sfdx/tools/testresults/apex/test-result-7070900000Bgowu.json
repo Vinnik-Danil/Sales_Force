@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Wed Apr 14 2021 2:14:49 PM",
+    "testExecutionTimeInMs": 141,
+    "testTotalTimeInMs": 141,
+    "commandTimeInMs": 360,
+    "hostname": "https://koroka3-dev-ed.my.salesforce.com",
+    "orgId": "00D09000007InLiEAK",
+    "username": "danil@koroka.com",
+    "testRunId": "7070900000Bgowu",
+    "userId": "00509000004BKFGAA4"
+  },
+  "tests": [
+    {
+      "id": "07M09000001CBT3EAO",
+      "queueItemId": "70909000000DpPBAA0",
+      "stackTrace": "Class.LeadProcessorTest.test: line 21, column 1",
+      "message": "System.AssertException: Assertion Failed: Expected: 200, Actual: 0",
+      "asyncApexJobId": "7070900000BgowuAAB",
+      "methodName": "test",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhH1YAAV",
+        "name": "LeadProcessorTest",
+        "namespacePrefix": null,
+        "fullName": "LeadProcessorTest"
+      },
+      "runTime": 141,
+      "testTimestamp": "2021-04-14T11:14:51.000+0000",
+      "fullName": "LeadProcessorTest.test",
+      "diagnostic": {
+        "exceptionMessage": "System.AssertException: Assertion Failed: Expected: 200, Actual: 0",
+        "exceptionStackTrace": "Class.LeadProcessorTest.test: line 21, column 1",
+        "className": "LeadProcessorTest",
+        "compileProblem": "",
+        "lineNumber": 21,
+        "columnNumber": 1
+      }
+    }
+  ]
+}

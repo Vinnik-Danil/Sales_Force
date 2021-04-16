@@ -1,0 +1,210 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 9,
+    "passing": 7,
+    "failing": 2,
+    "skipped": 0,
+    "passRate": "78%",
+    "failRate": "22%",
+    "skipRate": "0%",
+    "testStartTime": "Wed Apr 14 2021 9:14:13 AM",
+    "testExecutionTimeInMs": 4897,
+    "testTotalTimeInMs": 4897,
+    "commandTimeInMs": 443,
+    "hostname": "https://koroka3-dev-ed.my.salesforce.com",
+    "orgId": "00D09000007InLiEAK",
+    "username": "danil@koroka.com",
+    "testRunId": "7070900000BggCc",
+    "userId": "00509000004BKFGAA4"
+  },
+  "tests": [
+    {
+      "id": "07M09000001CBKLEA4",
+      "queueItemId": "70909000000DpNgAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "asdf",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhFcCAAV",
+        "name": "AccountProcessorTest",
+        "namespacePrefix": null,
+        "fullName": "AccountProcessorTest"
+      },
+      "runTime": 723,
+      "testTimestamp": "2021-04-14T06:14:13.000+0000",
+      "fullName": "AccountProcessorTest.asdf"
+    },
+    {
+      "id": "07M09000001CBKGEA4",
+      "queueItemId": "70909000000DpNhAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "checkHumidityAnomaly",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhwJ6AAJ",
+        "name": "TestWeatherTriggerHandler",
+        "namespacePrefix": null,
+        "fullName": "TestWeatherTriggerHandler"
+      },
+      "runTime": 211,
+      "testTimestamp": "2021-04-14T06:14:13.000+0000",
+      "fullName": "TestWeatherTriggerHandler.checkHumidityAnomaly"
+    },
+    {
+      "id": "07M09000001CBKHEA4",
+      "queueItemId": "70909000000DpNhAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "checkPressureAnomaly",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhwJ6AAJ",
+        "name": "TestWeatherTriggerHandler",
+        "namespacePrefix": null,
+        "fullName": "TestWeatherTriggerHandler"
+      },
+      "runTime": 77,
+      "testTimestamp": "2021-04-14T06:14:13.000+0000",
+      "fullName": "TestWeatherTriggerHandler.checkPressureAnomaly"
+    },
+    {
+      "id": "07M09000001CBKIEA4",
+      "queueItemId": "70909000000DpNhAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "checkTemperatureAnomaly",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhwJ6AAJ",
+        "name": "TestWeatherTriggerHandler",
+        "namespacePrefix": null,
+        "fullName": "TestWeatherTriggerHandler"
+      },
+      "runTime": 96,
+      "testTimestamp": "2021-04-14T06:14:13.000+0000",
+      "fullName": "TestWeatherTriggerHandler.checkTemperatureAnomaly"
+    },
+    {
+      "id": "07M09000001CBKJEA4",
+      "queueItemId": "70909000000DpNhAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "checkWithoutAnomalies",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhwJ6AAJ",
+        "name": "TestWeatherTriggerHandler",
+        "namespacePrefix": null,
+        "fullName": "TestWeatherTriggerHandler"
+      },
+      "runTime": 54,
+      "testTimestamp": "2021-04-14T06:14:14.000+0000",
+      "fullName": "TestWeatherTriggerHandler.checkWithoutAnomalies"
+    },
+    {
+      "id": "07M09000001CBKQEA4",
+      "queueItemId": "70909000000DpNiAAK",
+      "stackTrace": "Class.LeadProcessorTest.test: line 21, column 1",
+      "message": "System.AssertException: Assertion Failed: Expected: 200, Actual: 0",
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "test",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhH1YAAV",
+        "name": "LeadProcessorTest",
+        "namespacePrefix": null,
+        "fullName": "LeadProcessorTest"
+      },
+      "runTime": 189,
+      "testTimestamp": "2021-04-14T06:14:14.000+0000",
+      "fullName": "LeadProcessorTest.test",
+      "diagnostic": {
+        "exceptionMessage": "System.AssertException: Assertion Failed: Expected: 200, Actual: 0",
+        "exceptionStackTrace": "Class.LeadProcessorTest.test: line 21, column 1",
+        "className": "LeadProcessorTest",
+        "compileProblem": "",
+        "lineNumber": 21,
+        "columnNumber": 1
+      }
+    },
+    {
+      "id": "07M09000001CBKaEAO",
+      "queueItemId": "70909000000DpNjAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "testDailyLeadProcessor",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhONWAA3",
+        "name": "DailyLeadProcessorTest",
+        "namespacePrefix": null,
+        "fullName": "DailyLeadProcessorTest"
+      },
+      "runTime": 2858,
+      "testTimestamp": "2021-04-14T06:14:13.000+0000",
+      "fullName": "DailyLeadProcessorTest.testDailyLeadProcessor"
+    },
+    {
+      "id": "07M09000001CBKVEA4",
+      "queueItemId": "70909000000DpNkAAK",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "testQueueable",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000DhHUcAAN",
+        "name": "AddPrimaryContactTest",
+        "namespacePrefix": null,
+        "fullName": "AddPrimaryContactTest"
+      },
+      "runTime": 605,
+      "testTimestamp": "2021-04-14T06:14:14.000+0000",
+      "fullName": "AddPrimaryContactTest.testQueueable"
+    },
+    {
+      "id": "07M09000001CBKBEA4",
+      "queueItemId": "70909000000DpNlAAK",
+      "stackTrace": "Class.TestGetWeatherFromOpenWeather.testScheduledJob: line 11, column 1",
+      "message": "System.QueryException: List has no rows for assignment to SObject",
+      "asyncApexJobId": "7070900000BggCcAAJ",
+      "methodName": "testScheduledJob",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0900000Dj5zHAAR",
+        "name": "TestGetWeatherFromOpenWeather",
+        "namespacePrefix": null,
+        "fullName": "TestGetWeatherFromOpenWeather"
+      },
+      "runTime": 84,
+      "testTimestamp": "2021-04-14T06:14:13.000+0000",
+      "fullName": "TestGetWeatherFromOpenWeather.testScheduledJob",
+      "diagnostic": {
+        "exceptionMessage": "System.QueryException: List has no rows for assignment to SObject",
+        "exceptionStackTrace": "Class.TestGetWeatherFromOpenWeather.testScheduledJob: line 11, column 1",
+        "className": "TestGetWeatherFromOpenWeather",
+        "compileProblem": "",
+        "lineNumber": 11,
+        "columnNumber": 1
+      }
+    }
+  ]
+}
