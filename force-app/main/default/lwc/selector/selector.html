@@ -1,0 +1,26 @@
+<template>
+    <div class="wrapper">
+    <header class="header">Select a Bike</header>
+    <section class="content">
+        <lightning-record-view-form
+            record-id="0030900000Bx45VAAR"
+            object-api-name="Contact">
+        <div class="slds-box">
+            <lightning-output-field field-name="Name">
+            </lightning-output-field>
+            <lightning-output-field field-name="Email__c">
+            </lightning-output-field>
+        </div>
+    </lightning-record-view-form>
+        <div class="columns">
+            
+            <main class="main" >
+                <c-list onproductselected={handleProductSelected}></c-list>
+            </main>
+            <aside class="sidebar-second">
+                <c-detail product-id={selectedProductId}></c-detail>
+            </aside>
+        </div>
+    </section>
+    </div>
+</template>
