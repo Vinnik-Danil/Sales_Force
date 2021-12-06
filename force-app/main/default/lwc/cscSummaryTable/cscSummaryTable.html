@@ -1,0 +1,36 @@
+<template>
+    
+    <!-- <lightning-datatable class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+        key-field="id" data={data} columns={cols}>
+    </lightning-datatable> -->
+
+
+<div class="rich-tabpanel-content ">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered table"  if:true={dataList}>
+        <thead>
+            <tr>
+                <th class="head">
+                </th>
+                <th class="head">
+                    <h1 class="slds-truncate" title="Details">Details</h1>
+                </th>
+                <th class="head">
+                    <h1 class="slds-truncate" title="Notes">Notes</h1>
+                </th>
+            </tr>
+        </thead>
+        <tr for:each={dataList} for:item="data" key={data.id}>
+            <th data-label="Title" scope="row" class="head colm1">
+                <h1>{data.field1}</h1>
+            </th>
+            <td key={data.id} data-label="Details" class="cell colm1">
+                <input type="text" value={data.field2}>
+            </td>
+            <td key={data.id} data-label="Notes" class="cell colm2">
+                <input type="text" value={data.field3}>
+            </td>
+            
+        </tr>
+    </table>
+</div>
+</template>

@@ -1,0 +1,56 @@
+<!-- <template>
+    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+    <div class="wrapp">
+        <div id="toDO1" draggable="true" class="slds-var-m-around_medium toDo"> 
+            <img src="https://lh3.googleusercontent.com/proxy/33bcUHObL-e37MXunRalx-aG7idNDMxemETcaro9pbBdiaoGTFhRNSsMS7wAMMDgpJynDFThuiDZ0BcLFi2eu6fnbk_O-jwNENbZOb9fDe6_" alt="">
+        </div>
+
+        <div id="toDO2" draggable="true" class="slds-var-m-around_medium toDo"> 
+            <img src="https://lh3.googleusercontent.com/proxy/33bcUHObL-e37MXunRalx-aG7idNDMxemETcaro9pbBdiaoGTFhRNSsMS7wAMMDgpJynDFThuiDZ0BcLFi2eu6fnbk_O-jwNENbZOb9fDe6_" alt="">
+        </div>
+
+        <div id="toDO3" draggable="true" class="slds-var-m-around_medium toDo"> 
+            <img src="https://lh3.googleusercontent.com/proxy/33bcUHObL-e37MXunRalx-aG7idNDMxemETcaro9pbBdiaoGTFhRNSsMS7wAMMDgpJynDFThuiDZ0BcLFi2eu6fnbk_O-jwNENbZOb9fDe6_" alt="">
+        </div>
+
+        <div class="slds-var-m-around_medium completed">
+
+        </div>
+    </div> 
+    </lightning-card>
+</template> -->
+<template>
+    <lightning-card title="Drag and Drop in Lightning Web Component">
+        <lightning-layout>
+            <div class="wrap">
+
+                <h1 class="slds-text-heading_small">TO-DO POSTS</h1><br/>
+
+                <div id="toDo" class="flex-container" ondragover={allowDrop} ondrop={drop} > 
+                    <div id="ToDo2" class="box" draggable="true" ondragstart={drag} ondragover={falseVar}>
+                        <span>ToDo2</span>
+                    </div>
+
+                    <div id="ToDo3" class="box" draggable="true" ondragstart={drag} ondragover={falseVar}>
+                        <span>ToDo3</span>
+                    </div>
+
+                    <div id="ToDo4" class="box" draggable="true" ondragstart={drag} ondragover={falseVar}>
+                        <span>ToDo4</span>
+                    </div>
+                </div>
+
+                <hr></hr>
+
+                <h1 class="slds-text-heading_small">COMPLETED POSTS</h1><br/>
+                
+                <div id="completWrap" class="flex-container" ondragover={allowDrop} ondrop={drop}>
+                    <div id="ToDo1" class="box completed" draggable="true" ondragstart={drag}>
+                        <span>ToDo1</span>
+                    </div>
+                </div>
+                
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>

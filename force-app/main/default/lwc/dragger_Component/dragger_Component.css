@@ -1,0 +1,32 @@
+.bolder_style{
+    border-radius: 10px;
+    background-color: #faf59b;
+    padding: 15px;
+    width: 150px;
+    height: 150px;
+}
+.completed{
+    width: 200px;
+    height: 400px;
+    background-color: lightblue;
+}
+.wrap{
+    display: flex;
+    margin: 5px 5%;
+}
+
+.left{
+    width: 45%;
+    margin: 15px;
+    background-color: greenyellow;
+}
+.right{
+    width: 45%;
+    margin: 15px;
+    background-color: khaki;
+}
+.card{
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+}

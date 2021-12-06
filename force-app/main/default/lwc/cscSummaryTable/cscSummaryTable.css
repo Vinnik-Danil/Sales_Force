@@ -1,0 +1,40 @@
+.head{
+    background-color: rgba(158, 195, 206, 0.32);
+    text-align: center;
+    border: 2px solid white;
+}
+.rich-tabpanel-content {
+    background-color: #f1f1f1;
+    /* color: #000;
+    border-bottom-color: #979292; */
+    border-right-color: #C0C0C0;
+    border-left-color: #C0C0C0;
+    font-family: Arial,Verdana,sans-serif;
+}
+.cell{
+    text-align: center;
+    background-color: rgb(240, 248, 255);
+    background-color: #e4f5fc;
+    border: 2px solid white;
+}
+.table{
+    padding: 15px;
+}
+.colm1{
+    width: 25%;
+}
+.colm2{
+    width: 49%;
+    text-align: left;
+    font-weight: 700;
+}
+th{
+    padding: 5px;
+}
+thead .head h1{
+    font-weight: 800;
+}
+input{
+    background-color: transparent;
+    border: none;
+}

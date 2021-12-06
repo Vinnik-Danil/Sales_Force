@@ -4,16 +4,15 @@
             <p>Hello, {greeting}!</p>
             <lightning-input class="test" label="Name" value={greeting} onchange={changeHandler}></lightning-input>
         </div>
-        <div class="wrap">
-            <div id="waiting" if:false={ready}>Loading…</div>
-            <div id="display" if:true={ready}></div>
-            <div>Name: {name}</div>
-            <div>Description: {description}</div>
-            <div>Category: {category}</div>
-            <div>Material: {material}</div>
-            <div>Price: {price}</div>
-            <div><img src={pictureUrl}/></div>
-        </div>
-    </div>
+<!--        <div class="wrap">-->
+<!--            <div id="waiting" if:false={ready}>Loading…</div>-->
+<!--            <div id="display" if:true={ready}></div>-->
+<!--            <div>Name: {name}</div>-->
+<!--            <div>Description: {description}</div>-->
+<!--            <div>Category: {category}</div>-->
+<!--            <div>Material: {material}</div>-->
+<!--            <div>Price: {price}</div>-->
+<!--            <div><img src={pictureUrl}/></div>-->
+<!--        </div>-->
     </lightning-card>
 </template>

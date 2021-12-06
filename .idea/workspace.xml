@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a709ac1-4896-4bb6-9ea4-c2301ee17ee8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.sfdx/sfdx-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.sfdx/sfdx-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/accountFinder/accountFinder.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/accountFinder/accountFinder.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/accountSearch/accountSearch.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/accountSearch/accountSearch.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/bearList/bearList.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/bearList/bearList.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/bearLocation/bearLocation.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/bearLocation/bearLocation.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/bearSupervisor/bearSupervisor.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/bearSupervisor/bearSupervisor.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/bikeCard/bikeCard.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/bikeCard/bikeCard.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/contactCreator/contactCreator.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/contactCreator/contactCreator.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/contactList/contactList.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/contactList/contactList.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/data/data.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/data/data.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/detail/detail.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/detail/detail.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/emailSender/emailSender.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/emailSender/emailSender.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/hello/hello.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/hello/hello.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/helloWebComponent/helloWebComponent.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/helloWebComponent/helloWebComponent.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/helloWorld/helloWorld.html" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/helloWorld/helloWorld.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/helloWorld/helloWorld.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/helloWorld/helloWorld.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/lWCCurrentUserIdDemo/lWCCurrentUserIdDemo.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/lWCCurrentUserIdDemo/lWCCurrentUserIdDemo.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/list/list.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/list/list.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/numerator/numerator.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/numerator/numerator.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/selector/lWCCurrentUserIdDemo.js-meta.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/selector/selector.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/selector/selector.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/force-app/main/default/lwc/tile/tile.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/force-app/main/default/lwc/tile/tile.js-meta.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IlluminatedCloudWorkspaceSettings">
+    <option name="moduleWorkspaceSettings">
+      <map>
+        <entry key="Sales_Force_Danil">
+          <value>
+            <ModuleWorkspaceSettings>
+              <option name="moduleContentsLastModified" value="1638802898722" />
+            </ModuleWorkspaceSettings>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectWorkspaceSettings">
+      <ProjectWorkspaceSettings>
+        <option name="connectionWorkspaceSettings">
+          <map>
+            <entry key="Danil_DevHub">
+              <value>
+                <ConnectionWorkspaceSettings>
+                  <option name="lastBuildScope" value="PROJECT" />
+                  <option name="lastBuildViewToggles">
+                    <map>
+                      <entry key="RETRIEVE">
+                        <value>
+                          <BuildViewToggles>
+                            <option name="showLocalAndServer" value="true" />
+                            <option name="showLocalOnly" value="false" />
+                            <option name="showServerOnly" value="true" />
+                            <option name="showSubscribedByParent" value="true" />
+                            <option name="showSubscribedOnly" value="true" />
+                          </BuildViewToggles>
+                        </value>
+                      </entry>
+                    </map>
+                  </option>
+                </ConnectionWorkspaceSettings>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="retrieveAndMergeDefault" value="false" />
+      </ProjectWorkspaceSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="21utbNXava3ompwvzmh7VdC0xdf" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a709ac1-4896-4bb6-9ea4-c2301ee17ee8" name="Changes" comment="" />
+      <created>1638802871926</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638802871926</updated>
+      <workItem from="1638802879252" duration="17000" />
+      <workItem from="1638802899412" duration="223000" />
+      <workItem from="1638803130831" duration="40000" />
+      <workItem from="1638803173705" duration="302000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
